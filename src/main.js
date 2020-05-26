@@ -1,7 +1,7 @@
-import 'phaser';
-import GameScene from './scenes/GameScene';
+// import 'phaser';
+// import GameScene from './scenes/GameScene';
 
-import '../styles/styles.scss'
+// import '../styles/styles.scss'
 
 // var config = {
 //     // For more settings see <https://github.com/photonstorm/phaser/blob/master/src/boot/Config.js>
@@ -26,5 +26,9 @@ import '../styles/styles.scss'
 // };
 
 // const game = new Phaser.Game(config); // eslint-disable-line no-unused-vars
+
+let x = 12;
+
+console.log(x);
 
 console.log("hi");

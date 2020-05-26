@@ -1,25 +1,15 @@
-const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-// const S3Plugin = require('webpack-s3-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const RobotstxtPlugin = require("robotstxt-webpack-plugin");
 
-var definePlugin = new webpack.DefinePlugin({
-	// WEBGL_RENDERER: true,
-	// CANVAS_RENDERER: false
-});
 
 module.exports = {
-	mode: 'development',
-	devtool: 'eval-source-map',
-	devServer: {
-		liveReload: true
-	},
 	entry: {
-		app: [path.resolve(__dirname, 'src/main.js')],
-		vendor: ['phaser'],
+		app: [path.resolve(__dirname, 'src/main.js')]
 	},
+	mode: "production",
 	module: {
 		rules: [
 			{
@@ -45,26 +35,26 @@ module.exports = {
 					// Translates CSS into CommonJS
 					'css-loader',
 					// Compiles Sass to CSS
-					'sass-loader',
+					'sass-loader'
 				],
 			}
 		],
 	},
 	plugins: [
-		definePlugin,
 		new CleanWebpackPlugin({
 			root: path.resolve(__dirname, '../'),
-		}),
-		new webpack.DefinePlugin({
-			CANVAS_RENDERER: JSON.stringify(true),
-			WEBGL_RENDERER: JSON.stringify(true),
 		}),
 		new HtmlWebpackPlugin({
 			template: './index.html',
 			favicon: './favicon.ico',
+			
 		}),
-		new CopyPlugin([
-			{ from: 'assets', to: 'assets' }
-		])
-	],
+		new CopyPlugin({
+			patterns: [
+				{ from: 'assets', to: 'assets' },
+				{ from: 'robots.txt', to: 'assets' },
+			]
+		}),
+		new RobotstxtPlugin({filePath: './robots.txt'})
+	]
 };

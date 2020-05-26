@@ -44,8 +44,8 @@ resource "aws_cloudfront_distribution" "cf-dist" {
     }
   }
 
-  viewer_certificate {
-    acm_certificate_arn = "${var.ssl-arn}"
-    ssl_support_method  = "sni-only"
-  }
+    viewer_certificate {
+      acm_certificate_arn = "${var.ssl-arn}"
+      ssl_support_method  = "sni-only"
+    }
 }

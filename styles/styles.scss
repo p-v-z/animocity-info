@@ -1,2 +1,8 @@
-@import './scss/normalize';
 @import './scss/site';
+
+// Your variable overrides
+$body-bg: rgb(43, 43, 43);
+$body-color: rgb(214, 214, 214);
+
+// Bootstrap and its default variables
+@import "node_modules/bootstrap/scss/bootstrap";
