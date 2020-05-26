@@ -1,0 +1,55 @@
+html {
+	overflow: hidden;
+	
+	font-family: 'Amatic SC', cursive;
+	font-weight: bold;
+	line-height: normal;
+}
+
+p {
+	color: white;
+	margin: 0;
+}
+
+h1 {
+	color: #444;
+}
+
+.gameOverlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.addSheep {
+	position: fixed;
+	display: block;
+	left: calc(50% - 12.5vw);
+	
+	font-size: 3em;
+	font-weight: bold;
+	line-height: 0.5rem;
+
+
+	width: 25vw;
+	height: 10vh;
+
+	bottom: 3rem;
+	border-radius: 5rem;
+}
+
+.text-center {
+	text-align: center;
+}
+
+#scorePre {
+	padding-top: 10vh;
+	font-size: 6vh;
+}
+#scorePost {
+	font-size: 7vh;
+}
+#score {
+	font-size: 10vh;
+	text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+}
