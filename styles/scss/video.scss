@@ -1,0 +1,28 @@
+ /* Style the video: 100% width and height to cover the entire window */
+ #myVideo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+  }
+  
+.content {
+  position: relative;
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.content video {
+  width: 100%;
+  display: block;
+  z-index: -1;
+}
+
+iframe {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	padding: 2rem;
+}

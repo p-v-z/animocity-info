@@ -17,8 +17,7 @@ module.exports = {
 		liveReload: true
 	},
 	entry: {
-		app: [path.resolve(__dirname, 'src/main.js')],
-		vendor: ['phaser'],
+		app: [path.resolve(__dirname, 'src/main.js')]
 	},
 	module: {
 		rules: [
@@ -47,7 +46,11 @@ module.exports = {
 					// Compiles Sass to CSS
 					'sass-loader',
 				],
-			}
+			},
+			{
+				test: /\.mp4$/,
+				use: 'file-loader?name=videos/[name].[ext]',
+		 	}
 		],
 	},
 	plugins: [
