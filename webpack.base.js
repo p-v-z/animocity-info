@@ -37,7 +37,11 @@ module.exports = {
 					// Compiles Sass to CSS
 					'sass-loader'
 				],
-			}
+			},
+			{
+				test: /\.mp4$/,
+				use: 'file-loader?name=videos/[name].[ext]',
+		 	}
 		],
 	},
 	plugins: [

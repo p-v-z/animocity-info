@@ -1,17 +1,2 @@
 @import './scss/site';
-
-// Your variable overrides
-$blue: green;
-$bg-primary: red;
-$body-bg: pink;
-// $body-bg: rgb(185, 185, 185);
-// $body-color: rgb(214, 214, 214);
-
-$theme-colors: (
-  "primary": orange,
-  "danger": #ff4136
-);
-
-// Bootstrap and its default variables
-// @import "~bootstrap";
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import './scss/video';

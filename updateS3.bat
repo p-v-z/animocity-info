@@ -1,0 +1,1 @@
+aws s3 cp D:\Web_dev\animocity-info\dist s3://animocity.info --recursive
