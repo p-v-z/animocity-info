@@ -6,9 +6,7 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "http-server",
-		"build": "webpack --config webpack.base.js",
-		"publish": "aws s3 cp ./dist s3://animocity.info --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers --recursive",
-		"publish:win": "aws s3 cp D:\Web_dev\animocity-info\dist s3://animocity.info --recursive"
+		"build": "webpack --config webpack.base.js"
 	},
 	"license": "ISC",
 	"dependencies": {},
