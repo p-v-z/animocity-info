@@ -2,12 +2,13 @@
 
 provider "aws" {
   region = "${var.region}"
-  profile = "pvz-dev"
+  profile = "${var.profile}"
 }
 
+// Remember to run terraform init -reconfigure
 terraform {
   backend "s3" {
-    bucket = "37sg-tf-state-sheep"
+    bucket = "a82z-tf-state-animocity"
     key    = "environment"
     region = "us-east-1"
   }
